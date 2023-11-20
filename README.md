@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/github/ChrisCoy/Elixir-Course-Challenge-10-CI-CD/graph/badge.svg?token=FEW0GD8U57)](https://codecov.io/github/ChrisCoy/Elixir-Course-Challenge-10-CI-CD)
+
 # Coyapi
 
 To start your Phoenix server:
