@@ -1,4 +1,5 @@
 defmodule CoyapiWeb.Auth.Guardian do
+  @moduledoc false
   alias Coyapi.Error
   alias Coyapi.Users
   alias Coyapi.User
@@ -7,7 +8,6 @@ defmodule CoyapiWeb.Auth.Guardian do
   def subject_for_token(%User{id: id}, _claims), do: {:ok, id}
 
   def resource_from_claims(%{"sub" => id}) do
-    IO.inspect("resource_from_claims")
     Users.Get.by_id(id)
   end
 

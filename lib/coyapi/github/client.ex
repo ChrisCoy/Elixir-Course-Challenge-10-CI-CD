@@ -1,4 +1,5 @@
 defmodule Coyapi.Github.Client do
+  @moduledoc false
   alias Coyapi.Error
 
   use Tesla

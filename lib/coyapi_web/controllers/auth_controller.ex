@@ -8,19 +8,18 @@ defmodule CoyapiWeb.AuthController do
   use CoyapiWeb, :controller
 
   def login(conn, params) do
-    with {:ok, token} <- Guardian.authenticate(params) do
-      json(conn, %{token: token})
-    else
+    case Guardian.authenticate(params) do
+      {:ok, token} -> json(conn, %{token: token})
       {:error, %{result: result}} -> conn |> put_status(500) |> json(%{error: result})
       _ -> conn |> put_status(500) |> json(%{error: "Error"})
     end
   end
 
   def register(conn, params) do
-    with {:ok, user} <- Create.call(params) do
-      IO.inspect(user, label: "userlol")
-      json(conn, %{user: user})
-    else
+    case Create.call(params) do
+      {:ok, user} ->
+        json(conn, %{user: user})
+
       {:error, %Changeset{} = user} ->
         conn |> put_status(400) |> json(%{errors: translate_errors(user)})
     end

@@ -1,4 +1,5 @@
 defmodule Coyapi.Users.Get do
+  @moduledoc false
   alias Coyapi.{Repo, User}
 
   def by_id(id) do

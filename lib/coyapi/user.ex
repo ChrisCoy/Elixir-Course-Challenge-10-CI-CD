@@ -1,4 +1,5 @@
 defmodule Coyapi.User do
+  @moduledoc false
   alias Ecto.Changeset
   use Ecto.Schema
   import Ecto.Changeset

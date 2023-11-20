@@ -1,4 +1,5 @@
 defmodule Coyapi.Error do
+  @moduledoc false
   @keys [:status, :result]
   @enforce_keys @keys
   @derive {Jason.Encoder, only: @keys}

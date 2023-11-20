@@ -1,4 +1,5 @@
 defmodule CoyapiWeb.Auth.ErrorHandler do
+  @moduledoc false
   alias Plug.Conn
   alias Guardian.Plug.ErrorHandler
 

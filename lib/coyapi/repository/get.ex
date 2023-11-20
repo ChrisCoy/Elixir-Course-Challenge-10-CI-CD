@@ -1,4 +1,5 @@
 defmodule Coyapi.Repository.Get do
+  @moduledoc false
   alias Coyapi.Repository
   alias Coyapi.Github.Client
   alias Coyapi.Error
