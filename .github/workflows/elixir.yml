@@ -65,6 +65,5 @@ jobs:
       env:
         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}\
 
-      
     - name: Run tests
       run: mix test
