@@ -7,8 +7,7 @@ import Config
 # Run `mix help test` for more information.
 config :coyapi, Coyapi.Repo,
   username: "postgres",
-  password: "123123",
-  port: 4242,
+  password: "postgres",
   database: "coyapi_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: 10
